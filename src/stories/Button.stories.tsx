@@ -36,3 +36,10 @@ Text.args = {
   label: 'Button'
 }
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  variant: 'primary',
+  label: 'Button',
+  disabled: true
+}
+
