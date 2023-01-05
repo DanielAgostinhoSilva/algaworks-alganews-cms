@@ -9,7 +9,9 @@ export default function Input({label, ...props}: InputProps) {
     return <I.Wrapper>
         {
             label &&
-            <span>{label}</span>
+            <span className={'Label'}>
+                {label}:
+            </span>
         }
         <input type="text" {...props}/>
     </I.Wrapper>
