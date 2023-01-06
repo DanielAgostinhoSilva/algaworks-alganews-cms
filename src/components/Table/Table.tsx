@@ -1,77 +1,13 @@
-import React, {useMemo} from "react";
-import {Column, useTable} from "react-table";
+import React from "react";
+import {TableInstance} from "react-table";
 import * as T from "./Table.styles"
-import Icon from "@mdi/react";
-import {mdiOpenInNew} from "@mdi/js";
 
-type Data = {
-    preview: React.ReactNode
-    col1: string
-    col2: string
-    actions: string
-}
 
 export interface TableProps {
 
 }
 
-export default function Table({}: TableProps) {
-    const data = useMemo<Data[]>(
-        () => [
-            {
-                col1: 'Hello',
-                col2: 'World',
-                actions: 'ações',
-                preview: <Icon
-                    size={'14px'}
-                    color={'#09F'}
-                    path={mdiOpenInNew} />
-            },
-            {
-                col1: 'react-table',
-                col2: 'rocks',
-                actions: 'ações',
-                preview: <Icon
-                    size={'14px'}
-                    color={'#09F'}
-                    path={mdiOpenInNew} />
-            },
-            {
-                col1: 'whatever',
-                col2: 'you want',
-                actions: 'ações',
-                preview: <Icon
-                    size={'14px'}
-                    color={'#09F'}
-                    path={mdiOpenInNew} />
-            },
-        ],
-        []
-    );
-
-    const columns = useMemo<Column<Data>[]>(
-        () => [
-            {
-                Header: '',
-                accessor: 'preview', // accessor is the "key" in the data
-            },
-            {
-                Header: 'Column 1',
-                accessor: 'col1', // accessor is the "key" in the data
-                width: 320,
-                Cell: (row) => <div style={{textAlign: 'right'}}>{row.value}</div>
-            },
-            {
-                Header: 'Column 2',
-                accessor: 'col2',
-            },
-            {
-                Header: 'Ações',
-                accessor: 'actions',
-            },
-        ],
-        []
-    )
+export default function Table<T extends Object>({instance}: {instance: TableInstance<T>}) {
 
     const {
         getTableProps,
@@ -79,7 +15,7 @@ export default function Table({}: TableProps) {
         prepareRow,
         headerGroups,
         rows
-    } = useTable<Data>({data, columns})
+    } = instance
 
     return <T.Wrapper cellPadding={0} cellSpacing={0} {...getTableProps()}>
         <T.Heading>
