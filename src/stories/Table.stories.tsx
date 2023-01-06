@@ -90,7 +90,7 @@ export function Default() {
                 Cell: () => (<Icon path={mdiOpenInNew} size={'14px'} color={'#09f'} /> )// accessor is the "key" in the data
             },
             {
-                Header: 'Artigo',
+                Header: () => <div style={{textAlign: 'left'}}>Artigo</div>,
                 accessor: 'title', // accessor is the "key" in the data
                 width: 320,
                 Cell: (props) => <div style={{textAlign: 'left', display: 'flex', alignItems: 'center', gap: '8px'}}>
@@ -104,7 +104,7 @@ export function Default() {
                 </div>
             },
             {
-                Header: 'View',
+                Header: <div style={{textAlign: 'right'}}>Views</div>,
                 accessor: 'views',
                 Cell: (props) => <div style={{
                     textAlign: 'right',
@@ -115,7 +115,7 @@ export function Default() {
                 </div>
             },
             {
-                Header: 'Conversões',
+                Header: <div style={{textAlign: 'left'}}>Conversões</div>,
                 accessor: 'conversions',
                 Cell: (props) => <div style={{
                     display: 'flex',
@@ -128,7 +128,8 @@ export function Default() {
                 </div>
             },
             {
-                Header: 'Ações',
+                id: Math.random().toString(),
+                Header: <div style={{textAlign: 'right'}}>Ações</div>,
                 Cell: () => <div style={{textAlign: 'right'}}>
                     todo: action
                 </div>
