@@ -23,6 +23,7 @@ ChartJS.register(
 );
 
 export const options = {
+    maintainAspectRatio: false,
     responsive: true,
     plugins: {
         legend: {
@@ -61,6 +62,10 @@ export interface ChartProps {
 
 export default function Chart({}: ChartProps) {
     return <div>
-        <Line options={options} data={data} />
+        <Line
+            options={options}
+            data={data}
+            height={200}
+        />
     </div>
 }
