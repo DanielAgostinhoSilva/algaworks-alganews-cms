@@ -6,6 +6,7 @@ const COLORS = {
 }
 
 export const Wrapper = styled.table`
+  width: 100%;
   color: ${COLORS.default};
   background-color: ${transparentize(0.95, COLORS.default)};
 `
