@@ -1,71 +1,59 @@
-import React from 'react';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
-import faker from 'faker';
+import {Line} from "react-chartjs-2";
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-);
-
-export const options = {
-    maintainAspectRatio: false,
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top' as const,
-        },
-        title: {
-            display: true,
-            text: 'Chart.js Line Chart',
-        },
-    },
-};
-
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-export const data = {
-    labels,
+const data = {
+    labels: ['1', '2', '3', '4', '5', '6'],
     datasets: [
         {
-            label: 'Dataset 1',
-            data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-            borderColor: 'rgb(255, 99, 132)',
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            fill: false,
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgba(255, 99, 132, 0.2)',
+            yAxisID: 'y-axis-1',
         },
         {
-            label: 'Dataset 2',
-            data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-            borderColor: 'rgb(53, 162, 235)',
-            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+            label: '# of No Votes',
+            data: [1, 2, 1, 1, 2, 2],
+            fill: false,
+            backgroundColor: 'rgb(54, 162, 235)',
+            borderColor: 'rgba(54, 162, 235, 0.2)',
+            yAxisID: 'y-axis-2',
         },
     ],
 };
 
-export interface ChartProps {
+const options: Chart.ChartOptions = {
+    maintainAspectRatio: false,
+    scales: {
+        yAxes: [
+            {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                id: 'y-axis-1',
+            },
+            {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                id: 'y-axis-2',
+                gridLines: {
+                    display: false
+                },
+            },
+        ],
+    },
+};
 
-}
+export interface ChartProps {}
 
-export default function Chart({}: ChartProps) {
+export default function Chart ({}: ChartProps) {
     return <div>
         <Line
-            options={options}
+            type="line"
+            height={100}
             data={data}
-            height={200}
+            options={options}
         />
     </div>
 }

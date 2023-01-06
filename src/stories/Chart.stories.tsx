@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Chart , {ChartProps} from "../components/Chart/Chart";
+import Chart, {ChartProps} from "../components/Chart/Chart";
 
 
 
