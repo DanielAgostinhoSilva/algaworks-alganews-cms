@@ -8,16 +8,18 @@ const data = {
             data: [500, 400, 600, 100, 800, 20],
             fill: true,
             backgroundColor: '#0099FF',
-            borderColor: 'transparent',
-            yAxisID: 'y-axis-1',
+            borderColor: '#0099FF',
+            borderWidth: 0.5,
+            yAxisID: 'cashflow',
         },
         {
             label: 'Despesas',
-            data: [1, 2, 1, 1, 2, 2],
+            data: [100, 200, 250, 500, 1000, 600],
             fill: true,
             backgroundColor: '#274060',
-            borderColor: 'transparent',
-            yAxisID: 'y-axis-2',
+            borderColor: '#274060',
+            borderWidth: 0.5,
+            yAxisID: 'cashflow',
         },
     ],
 };
@@ -25,9 +27,9 @@ const data = {
 const options: Chart.ChartOptions = {
     maintainAspectRatio: false,
     elements: {
-      line: {
-          tension: 0
-      }
+        line: {
+            tension: 0
+        }
     },
     legend: {
         display: true,
@@ -43,25 +45,15 @@ const options: Chart.ChartOptions = {
                 type: 'linear',
                 display: true,
                 position: 'left',
-                id: 'y-axis-1',
-            },
-            {
-                type: 'linear',
-                display: true,
-                position: 'right',
-                id: 'y-axis-2',
-                gridLines: {
-                    display: false
-                },
-            },
+                id: 'cashflow',
+            }
         ],
     },
 };
 
-export interface ChartProps {
-}
+export interface ChartProps {}
 
-export default function Chart({}: ChartProps) {
+export default function Chart ({}: ChartProps) {
     return <div>
         <Line
             type="line"
