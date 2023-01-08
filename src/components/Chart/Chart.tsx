@@ -24,6 +24,14 @@ const data = {
 
 const options: Chart.ChartOptions = {
     maintainAspectRatio: false,
+    legend: {
+        display: true,
+        position: 'bottom',
+        align: 'center',
+        labels: {
+            usePointStyle: true
+        }
+    },
     scales: {
         yAxes: [
             {
@@ -45,9 +53,10 @@ const options: Chart.ChartOptions = {
     },
 };
 
-export interface ChartProps {}
+export interface ChartProps {
+}
 
-export default function Chart ({}: ChartProps) {
+export default function Chart({}: ChartProps) {
     return <div>
         <Line
             type="line"
