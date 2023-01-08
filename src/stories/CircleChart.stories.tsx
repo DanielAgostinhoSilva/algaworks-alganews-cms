@@ -9,16 +9,23 @@ export default {
     title: 'Example/CircleChart',
     component: CircleChart,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-    // argTypes: {
-    //   backgroundColor: { control: 'color' },
-    // },
+    argTypes: {
+      progress: {
+          control: {
+              type: 'range',
+              min: 0,
+              max: 100
+          }
+      },
+    },
 } as ComponentMeta<typeof CircleChart>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof CircleChart> = (args) => <CircleChart {...args} />;
+const Template: ComponentStory<typeof CircleChart> = (args: CircleChartProps) => <CircleChart {...args} />;
 
-export const Primary = Template.bind({})
-Primary.args = {
-
+export const Default = Template.bind({})
+Default.args = {
+    progress: 80,
+    size: 150
 }
 
