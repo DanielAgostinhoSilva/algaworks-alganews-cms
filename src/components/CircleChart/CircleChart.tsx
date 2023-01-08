@@ -1,4 +1,5 @@
 import * as CC from "./CircleChart.styles"
+import {useEffect, useState} from "react";
 
 export interface CircleChartProps {
     size: number
@@ -8,7 +9,31 @@ export interface CircleChartProps {
     strokeWidth?: number
 }
 
-function CircleChart({}: CircleChartProps) {
+function CircleChart(props: CircleChartProps) {
+    // funcao que recupera a cor do chart com base no tema
+    const getThemeColor = () =>
+        props.theme === 'primary' ? '#09f' : '#274060'
+
+    // setup (configuracoes de cor, borda, etc...)
+    const THEME = getThemeColor()
+    const STROKE_WIDTH = props.strokeWidth || 8
+    const STROKE_COLOR = THEME
+
+    // metematica da coisa
+    const CENTER = props.size / 2
+    const RADIUS = props.size / 2 - STROKE_WIDTH / 2
+    const CIRCUMFERENCE = 2 * Math.PI * RADIUS
+
+    // estado de ofset
+    const [offset, setOffset] = useState(CIRCUMFERENCE)
+
+    // observador para animar o offsset
+    useEffect(() => {
+        const progressOffset = ((100 - props.progress) / 100) * CIRCUMFERENCE
+        setOffset(progressOffset)
+    },[setOffset, CIRCUMFERENCE, props.progress, offset])
+
+
     return <CC.Wrapper>
         todo: circle chart
     </CC.Wrapper>
