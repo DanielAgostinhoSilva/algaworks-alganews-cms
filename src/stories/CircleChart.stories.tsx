@@ -26,6 +26,15 @@ const Template: ComponentStory<typeof CircleChart> = (args: CircleChartProps) =>
 export const Default = Template.bind({})
 Default.args = {
     progress: 80,
-    size: 150
+    size: 150,
+    caption: 'web'
+}
+
+export const Primary = Template.bind({})
+Primary.args = {
+    progress: 80,
+    size: 150,
+    caption: 'web',
+    theme: 'primary'
 }
 
