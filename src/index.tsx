@@ -16,7 +16,7 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path={"/home"} element={<Home/>}/>
+                <Route path={"/"} element={<Home/>}/>
                 <Route path={"/contato"} element={<Contact/>}/>
                 <Route path={'/usuario/:userId'} element={<User/>}/>
                 <Route path={"/*"} element={<NotFound404/>}/>

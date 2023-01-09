@@ -1,5 +1,7 @@
 import * as DL from "./Default.layout.styles"
 import Navbar from "../../components/NavBar/NavBar";
+import Logo from "../../components/Logo/Logo";
+import SessionController from "../../components/SessionController";
 export interface DefaultLayoutProps {
     children: React.ReactNode
 }
@@ -7,7 +9,7 @@ export interface DefaultLayoutProps {
 export function DefaultLayout({children}: DefaultLayoutProps) {
     return <DL.Wrapper>
         <DL.Header>
-            header
+            <Logo />
         </DL.Header>
         <DL.Main>
             <DL.Navigation>
@@ -17,7 +19,7 @@ export function DefaultLayout({children}: DefaultLayoutProps) {
                 {children}
             </DL.FeaturedContent>
             <DL.Aside>
-                aisde
+                <SessionController name={'Fulano Silva'} description={'editor há 2 anos'} />
             </DL.Aside>
         </DL.Main>
 
