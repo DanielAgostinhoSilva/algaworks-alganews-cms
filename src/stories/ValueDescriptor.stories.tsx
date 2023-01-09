@@ -19,27 +19,27 @@ const Template: ComponentStory<typeof ValueDescriptor> = (args) => <ValueDescrip
 
 export const Default = Template.bind({})
 Default.args = {
-    descriptioin: 'ganhos no mês:',
+    description: 'ganhos no mês:',
     value: 560_322.02
 }
 
 export const DefaultCurrency = Template.bind({})
 DefaultCurrency.args = {
-    descriptioin: 'ganhos no mês:',
+    description: 'ganhos no mês:',
     value: 560_322.02,
     isCurrency: true
 }
 
 export const Primary = Template.bind({})
 Primary.args = {
-    descriptioin: 'ganhos no mês:',
+    description: 'ganhos no mês:',
     value: 560_322.02,
     color: 'primary'
 }
 
 export const PrimaryCurrency = Template.bind({})
 PrimaryCurrency.args = {
-    descriptioin: 'ganhos no mês:',
+    description: 'ganhos no mês:',
     value: 560_322.02,
     color: 'primary',
     isCurrency:  true

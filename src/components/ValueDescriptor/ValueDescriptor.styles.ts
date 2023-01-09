@@ -1,29 +1,22 @@
 import styled from "styled-components";
 
-const COLORS = {
-    default: '#274060',
-    primary: '#0099FF'
-}
-
-export const Wrapper = styled.div<{
-    color: 'primary' | 'default'
-}>`
+export const Wrapper = styled.div<{ color: string }>`
   display: flex;
   flex-direction: column;
-  color: ${COLORS.default};
-   
+  color: #274060;
+
   span.Description {
     font-size: 12px;
     text-transform: lowercase;
   }
-  
+
   span.Currency {
-    color: ${p => COLORS[p.color]};
+    color: ${p => p.color};
   }
-  
+
   span.Value {
     font-size: 18px;
     font-weight: 800;
-    color: ${p => COLORS[p.color]};
+    color: ${p => p.color};
   }
 `
