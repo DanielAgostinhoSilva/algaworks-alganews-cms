@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import TagInput , {TagInputProps} from "../components/TagInput";
+import {Tag} from "react-tag-input";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -35,4 +36,13 @@ VairousTags.args = {
     ]
 }
 
+export function WorkingLiveExample() {
+    const [tags, setTags] = useState<Tag[]>([])
 
+    return <TagInput
+        placeholder={'Insira as tags deste post'}
+        tags={tags}
+        onAdd={tag => setTags([...tags, tag])}
+        onDelete={index => setTags(tags.filter((tag, i) => i !== index))}
+    />
+}
