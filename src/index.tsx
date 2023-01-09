@@ -8,6 +8,7 @@ import Contact from "./app/views/Contact.view";
 import NotFound404 from "./app/views/NotFound404.view";
 import Navbar from "./app/components/NavBar/NavBar";
 import User from "./app/views/User.view";
+import GlobalStyles from "./core/globalStyles";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -23,6 +24,7 @@ root.render(
                 <Route path={"/*"} element={<NotFound404/>}/>
             </Routes>
         </BrowserRouter>
+        <GlobalStyles />
     </React.StrictMode>
 );
 
