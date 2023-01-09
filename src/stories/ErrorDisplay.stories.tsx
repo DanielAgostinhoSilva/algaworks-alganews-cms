@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ErrorDisplay from "../components/ErrorDisplay/ErrorDiplay";
+import ErrorDisplay from "../app/components/ErrorDisplay/ErrorDiplay";
 
 
 

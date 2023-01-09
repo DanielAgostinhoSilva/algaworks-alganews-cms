@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {ComponentMeta} from '@storybook/react';
-import Table from "../components/Table/Table";
+import Table from "../app/components/Table/Table";
 import Icon from "@mdi/react";
 import {mdiOpenInNew} from "@mdi/js";
 import {Column, useTable} from "react-table";

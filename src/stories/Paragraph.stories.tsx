@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Paragraph , {ParagraphProps} from "../components/Typography/Paragraph/Paragraph";
+import Paragraph , {ParagraphProps} from "../app/components/Typography/Paragraph/Paragraph";
 
 
 

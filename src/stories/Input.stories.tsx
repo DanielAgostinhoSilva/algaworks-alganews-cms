@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Input , {InputProps} from "../components/Input/Input";
+import Input , {InputProps} from "../app/components/Input/Input";
 
 
 

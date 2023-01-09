@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import TagInput , {TagInputProps} from "../components/TagInput";
+import TagInput , {TagInputProps} from "../app/components/TagInput";
 import {Tag} from "react-tag-input";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

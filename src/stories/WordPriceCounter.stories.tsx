@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import WordPriceCounter , {WordPriceCounterProps} from "../components/WordPriceCounter/WordPriceCounter";
+import WordPriceCounter , {WordPriceCounterProps} from "../app/components/WordPriceCounter/WordPriceCounter";
 
 
 

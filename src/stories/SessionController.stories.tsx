@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import SessionController , {SessionControllerProps} from "../components/SessionController/SessionController";
+import SessionController , {SessionControllerProps} from "../app/components/SessionController/SessionController";
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import NoData , {NoDataProps} from "../components/NoData/NoData";
+import NoData , {NoDataProps} from "../app/components/NoData/NoData";
 
 
 

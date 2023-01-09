@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import MarkdownEditor , {MarkdownEditorProps} from "../components/MardownEditor";
+import MarkdownEditor , {MarkdownEditorProps} from "../app/components/MardownEditor";
 
 
 

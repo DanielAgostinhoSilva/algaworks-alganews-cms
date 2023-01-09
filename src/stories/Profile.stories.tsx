@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Profile , {ProfileProps} from "../components/Profile/Profile";
+import Profile , {ProfileProps} from "../app/components/Profile/Profile";
 
 
 

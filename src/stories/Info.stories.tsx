@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Info , {InfoProps} from "../components/Info/Info"
+import Info , {InfoProps} from "../app/components/Info/Info"
 
 
 
