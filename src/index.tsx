@@ -6,7 +6,6 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./app/views/Home.view";
 import Contact from "./app/views/Contact.view";
 import NotFound404 from "./app/views/NotFound404.view";
-import Navbar from "./app/components/NavBar/NavBar";
 import User from "./app/views/User.view";
 import GlobalStyles from "./core/globalStyles";
 
@@ -16,7 +15,6 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <Navbar/>
             <Routes>
                 <Route path={"/home"} element={<Home/>}/>
                 <Route path={"/contato"} element={<Contact/>}/>
