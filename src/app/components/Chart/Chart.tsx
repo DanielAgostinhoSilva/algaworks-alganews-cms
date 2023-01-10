@@ -1,10 +1,8 @@
-import {Line} from "react-chartjs-2";
-import styled from "styled-components";
-import {transparentize} from "polished";
-import Heading from "../Typography/Heading/Heading";
-import NoData from "../NoData/NoData";
-
-
+import {transparentize} from 'polished';
+import {Line} from 'react-chartjs-2';
+import styled from 'styled-components';
+import NoData from '../NoData/NoData';
+import Heading from '../Typography/Heading/Heading';
 
 const options: Chart.ChartOptions = {
     maintainAspectRatio: true,
@@ -46,13 +44,12 @@ export interface ChartProps {
     title: string
 }
 
-export default function Chart ({data, title}: ChartProps) {
-    return <ChartWrapper>
+export default function Chart({data, title}: ChartProps) {
+    return <ChartWrapper style={{width: '100%'}}>
         <div style={{marginBottom: 16}}>
             <Heading level={3}>
                 {title}
             </Heading>
-
         </div>
         {
             data
@@ -65,7 +62,6 @@ export default function Chart ({data, title}: ChartProps) {
                 />
                 : <NoData height={139}/>
         }
-
     </ChartWrapper>
 }
 
@@ -73,5 +69,4 @@ const ChartWrapper = styled.div`
   text-align: center;
   border: 1px solid ${transparentize(0.9, '#274060')};
   padding: 20px;
-  width: 640px;
 `

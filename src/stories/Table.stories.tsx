@@ -15,12 +15,6 @@ export default {
     // },
 } as ComponentMeta<typeof Table>;
 
-type Data = {
-    preview: React.ReactNode
-    col1: string
-    col2: string
-    actions: string
-}
 
 type Post = {
     id: number
