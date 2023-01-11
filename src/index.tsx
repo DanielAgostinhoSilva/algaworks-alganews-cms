@@ -7,6 +7,7 @@ import Home from "./app/views/Home.view";
 import NotFound404 from "./app/views/NotFound404.view";
 import GlobalStyles from "./core/globalStyles";
 import EditorslistView from "./app/views/EditorsList.view";
+import PostCreateView from "./app/views/PostCreate.view";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -17,6 +18,7 @@ root.render(
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
                 <Route path={"/editores"} element={<EditorslistView/>}/>
+                <Route path={"/post/criar"} element={<PostCreateView/>}/>
                 <Route path={"/*"} element={<NotFound404/>}/>
             </Routes>
         </BrowserRouter>
