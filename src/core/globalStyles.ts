@@ -17,8 +17,8 @@ export default createGlobalStyle`
   .confirm-overlay {
     background-color: ${transparentize(0.2, '#274060')};
   }
-  
-  .react-confirm-alert {
-    background-color: #F3F8FA;
+
+  .info-overlay {
+    background-color: ${transparentize(0.2, '#F3F8FA')};
   }
 `

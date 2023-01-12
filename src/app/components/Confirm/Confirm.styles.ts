@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {transparentize} from "polished";
 
 export const Wrapper = styled.div`
   padding: 24px;
@@ -9,6 +10,8 @@ export const Wrapper = styled.div`
   justify-content: center;
   color: #274969;
   width: 229px;
+  background-color: #F3F8FA;
+  border: 1px solid ${transparentize(0.9, '#274060')}
 `
 
 export const Title = styled.h2`
