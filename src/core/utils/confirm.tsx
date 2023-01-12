@@ -1,6 +1,6 @@
-import {confirmAlert} from "react-confirm-alert"
-import 'react-confirm-alert/src/react-confirm-alert.css'
-import Confirm from "../../app/components/Confirm/Confirm";
+import {confirmAlert} from 'react-confirm-alert'
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import Confirm from '../../app/components/Confirm/Confirm';
 
 interface ConfirmProps {
     title: string
@@ -8,25 +8,27 @@ interface ConfirmProps {
     onCancel?: () => any
 }
 
-export default function confirm({title, onConfirm, onCancel}: ConfirmProps){
+export default function confirm (props: ConfirmProps) {
     setTimeout(() => {
         confirmAlert({
             overlayClassName: 'confirm-overlay',
-            customUI: ({onClose}) => {
+            customUI: ({ onClose }) => {
                 return (
                     <Confirm
-                        title={title}
+                        title={props.title}
                         onConfirm={() => {
-                            if(onConfirm) onConfirm()
+                            if (props.onConfirm)
+                                props.onConfirm()
                             onClose()
                         }}
                         onCancel={() => {
-                            if(onCancel) onCancel()
+                            if (props.onCancel)
+                                props.onCancel()
                             onClose()
                         }}
                     />
-                )
+                );
             }
-        })
-    }, 0)
+        });
+    },0);
 }
