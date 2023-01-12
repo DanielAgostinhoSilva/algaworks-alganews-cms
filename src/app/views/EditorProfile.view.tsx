@@ -3,6 +3,6 @@ import EditorProfile from "../features/EditorProfile";
 
 export default function EditorProfileView() {
     return <DefaultLayout>
-        <EditorProfile />
+        <EditorProfile hidePersonalData={true}/>
     </DefaultLayout>
 }
