@@ -9,22 +9,24 @@ interface ConfirmProps {
 }
 
 export default function confirm({title, onConfirm, onCancel}: ConfirmProps){
-    confirmAlert({
-        overlayClassName: 'confirm-overlay',
-        customUI: ({onClose}) => {
-            return (
-                <Confirm
-                    title={title}
-                    onConfirm={() => {
-                        if(onConfirm) onConfirm()
-                        onClose()
-                    }}
-                    onCancel={() => {
-                        if(onCancel) onCancel()
-                        onClose()
-                    }}
-                />
-            )
-        }
-    })
+    setTimeout(() => {
+        confirmAlert({
+            overlayClassName: 'confirm-overlay',
+            customUI: ({onClose}) => {
+                return (
+                    <Confirm
+                        title={title}
+                        onConfirm={() => {
+                            if(onConfirm) onConfirm()
+                            onClose()
+                        }}
+                        onCancel={() => {
+                            if(onCancel) onCancel()
+                            onClose()
+                        }}
+                    />
+                )
+            }
+        })
+    }, 0)
 }
